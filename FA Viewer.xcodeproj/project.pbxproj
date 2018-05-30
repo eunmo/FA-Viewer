@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5407E10420BED7DF00DD17F5 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407E10320BED7DF00DD17F5 /* ImageCache.swift */; };
 		547E9F7A20AFCF940022E3AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E9F7920AFCF940022E3AE /* AppDelegate.swift */; };
 		547E9F7C20AFCF940022E3AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E9F7B20AFCF940022E3AE /* ViewController.swift */; };
 		547E9F7F20AFCF940022E3AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547E9F7D20AFCF940022E3AE /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5407E10320BED7DF00DD17F5 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		547E9F7620AFCF940022E3AE /* FA Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FA Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		547E9F7920AFCF940022E3AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		547E9F7B20AFCF940022E3AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				547E9F7920AFCF940022E3AE /* AppDelegate.swift */,
 				547E9F7B20AFCF940022E3AE /* ViewController.swift */,
+				5407E10320BED7DF00DD17F5 /* ImageCache.swift */,
 				547E9F7D20AFCF940022E3AE /* Main.storyboard */,
 				547E9F8020AFCF9E0022E3AE /* Assets.xcassets */,
 				547E9F8220AFCF9E0022E3AE /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5407E10420BED7DF00DD17F5 /* ImageCache.swift in Sources */,
 				547E9F7C20AFCF940022E3AE /* ViewController.swift in Sources */,
 				547E9F7A20AFCF940022E3AE /* AppDelegate.swift in Sources */,
 			);

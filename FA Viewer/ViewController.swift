@@ -9,17 +9,33 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKUIDelegate {
+class ViewController: UIViewController, WKUIDelegate{
 
-    @IBOutlet weak var webView: WKWebView!
+    var webView: WKWebView!
+    
+    override func loadView() {
+        let userScript = WKUserScript(source: "window.isWebkit = true;", injectionTime: WKUserScriptInjectionTime.atDocumentStart, forMainFrameOnly: true)
+        
+        let contentController = WKUserContentController()
+        contentController.addUserScript(userScript)
+        
+        let config = WKWebViewConfiguration()
+        config.userContentController = contentController
+        
+        let cache = ImageCache()
+        config.setURLSchemeHandler(cache, forURLScheme: "fa-custom-scheme")
+        
+        webView = WKWebView(frame: .zero, configuration: config)
+        webView.uiDelegate = self
+        webView.allowsBackForwardNavigationGestures = true
+        view = webView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webView.uiDelegate = self
-        let url = URL(string: "http://1.235.106.140:3050")!
+        let url = URL(string: ImageCache.serverAddress)!
         webView.load(URLRequest(url: url))
-        webView.allowsBackForwardNavigationGestures = true
     }
     
     override func prefersHomeIndicatorAutoHidden() -> Bool {
