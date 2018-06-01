@@ -29,6 +29,11 @@ class ViewController: UIViewController, WKUIDelegate{
         webView.uiDelegate = self
         webView.allowsBackForwardNavigationGestures = true
         view = webView
+        
+        webView.scrollView.bounces = true
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.refreshWebView(sender:)), for: UIControlEvents.valueChanged)
+        webView.scrollView.addSubview(refreshControl)
     }
     
     override func viewDidLoad() {
@@ -51,6 +56,11 @@ class ViewController: UIViewController, WKUIDelegate{
         alert.addAction(doneAction)
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func refreshWebView(sender: UIRefreshControl) {
+        webView.reload()
+        sender.endRefreshing()
     }
 }
 
