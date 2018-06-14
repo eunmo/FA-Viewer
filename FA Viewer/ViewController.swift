@@ -12,6 +12,7 @@ import WebKit
 class ViewController: UIViewController, WKUIDelegate{
 
     var webView: WKWebView!
+    let url = URL(string: ImageCache.serverAddress)!
     
     override func loadView() {
         let userScript = WKUserScript(source: "window.isWebkit = true;", injectionTime: WKUserScriptInjectionTime.atDocumentStart, forMainFrameOnly: true)
@@ -39,7 +40,6 @@ class ViewController: UIViewController, WKUIDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: ImageCache.serverAddress)!
         webView.load(URLRequest(url: url))
     }
     
@@ -59,7 +59,7 @@ class ViewController: UIViewController, WKUIDelegate{
     }
     
     @objc func refreshWebView(sender: UIRefreshControl) {
-        webView.reload()
+        webView.load(URLRequest(url: url))
         sender.endRefreshing()
     }
 }
