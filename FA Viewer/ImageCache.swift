@@ -11,7 +11,7 @@ import WebKit
 
 class ImageCache: NSObject, WKURLSchemeHandler {
     
-    static let serverAddress = "http://52.195.14.242:3050"
+    static let serverAddress = "http://13.230.33.104:3050"
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
     
     func saveFile(data: Data, url: URL) {
