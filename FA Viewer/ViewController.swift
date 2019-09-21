@@ -33,7 +33,7 @@ class ViewController: UIViewController, WKUIDelegate{
         
         webView.scrollView.bounces = true
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(self.refreshWebView(sender:)), for: UIControlEvents.valueChanged)
+        refreshControl.addTarget(self, action: #selector(self.refreshWebView(sender:)), for: UIControl.Event.valueChanged)
         webView.scrollView.addSubview(refreshControl)
     }
     
@@ -43,7 +43,11 @@ class ViewController: UIViewController, WKUIDelegate{
         webView.load(URLRequest(url: url))
     }
     
-    override func prefersHomeIndicatorAutoHidden() -> Bool {
+    override var prefersHomeIndicatorAutoHidden: Bool {
+        return true
+    }
+    
+    override var prefersStatusBarHidden: Bool {
         return true
     }
     

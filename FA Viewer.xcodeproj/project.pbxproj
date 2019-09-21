@@ -99,6 +99,7 @@
 				TargetAttributes = {
 					547E9F7520AFCF940022E3AE = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -293,7 +294,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.FA-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -311,7 +312,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.FA-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
