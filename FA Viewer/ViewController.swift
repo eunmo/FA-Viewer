@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKUIDelegate{
+class ViewController: UIViewController, WKUIDelegate {
 
     var webView: WKWebView!
     let url = URL(string: ImageCache.serverAddress)!
